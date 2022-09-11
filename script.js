@@ -7,7 +7,7 @@ let adviceText = document.querySelector("p")
 // API endpoint: https://api.adviceslip.com/advice
 const generateAdvice = async () => {
   // Use fetch to get the data
-    let response = await fetch ('https://api.adviceslip.com/advice');
+    let response = await fetch ('https://api.adviceslip.com/advice',{cache:"no-cache"});
     let data = await response.json()
     let slip = data.slip
     
